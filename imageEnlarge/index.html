@@ -1,0 +1,32 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+	<title>Title</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	<script>
+	// basic syntax $(selector).action()
+	$(document).ready(function(){    
+   		$("img").click(function(){    
+        	$("#bigImgBox").css("display", "block");
+        	$("#img01").attr("src", this.src);
+    	});
+    	$("span").click(function(){    
+        	$("#bigImgBox").css("display", "none");
+    	});
+	});
+</script>
+</head>
+<body>
+<img src="imgs/pup1.jpg">
+<img src="imgs/pup2.jpg">
+<img src="imgs/pup3.png">
+<!-- The Larger Image Box -->
+<div id="bigImgBox">
+  <!-- the X button -->
+  <span class="close">&times;</span> 
+  <!-- The big image -->
+  <img class="modal-content" id="img01">
+</div>
+</body>
+</html>
